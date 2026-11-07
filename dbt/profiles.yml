@@ -1,0 +1,8 @@
+energy_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('ENERGY_DUCKDB_PATH', '../data/energy_analytics.duckdb') }}"
+      schema: analytics
+      threads: 4
