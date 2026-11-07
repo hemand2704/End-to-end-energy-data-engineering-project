@@ -1,0 +1,14 @@
+pipeline:
+  name: cloud-data-engineering-pipeline
+  input_file: data/raw/energy_sample.csv
+  output_file: data/processed/energy_processed.csv
+  s3_prefix: portfolio/energy
+validation:
+  required_columns:
+    - event_time
+    - energy_kwh
+    - site
+aws:
+  region: ap-southeast-2
+  bucket_env_var: AWS_S3_BUCKET
+  prefix_env_var: AWS_S3_PREFIX
