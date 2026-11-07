@@ -1,0 +1,25 @@
+project:
+  name: energy-consumption-data-engineering
+source:
+  mode: sample
+  uci_zip_url: https://archive.ics.uci.edu/static/public/235/individual+household+electric+power+consumption.zip
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  cleaned_csv: energy_clean.csv
+  cleaned_parquet_dir: energy_clean.parquet
+spark:
+  app_name: EnergyConsumptionETL
+  master: local[*]
+  shuffle_partitions: 4
+quality:
+  required_columns:
+    - Date
+    - Time
+    - Global_active_power
+    - Global_reactive_power
+    - Voltage
+    - Global_intensity
+    - Sub_metering_1
+    - Sub_metering_2
+    - Sub_metering_3
