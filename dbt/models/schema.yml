@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: daily_energy
+    columns:
+      - name: energy_date
+        tests: [not_null, unique]
+      - name: measurement_count
+        tests: [not_null]
+  - name: monthly_energy
+    columns:
+      - name: energy_month
+        tests: [not_null, unique]
+      - name: measurement_count
+        tests: [not_null]
