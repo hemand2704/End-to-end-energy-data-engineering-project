@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.DS_Store
+.env
+data/raw/*
+data/processed/*
+data/*.duckdb
+!data/.gitkeep
+dbt/logs/
+dbt/target/
+dbt/dbt_packages/
